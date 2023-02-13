@@ -1,0 +1,47 @@
+
+.card{
+   font-family: sans-serif;
+  
+    height: 205px;
+    
+    text-align: center;
+    margin: 15px;
+   
+    border-color: none;
+    text-decoration: none;
+    box-shadow: rgba(78, 177, 220, 0.07) 0px 2px 4px 0px, rgba(79, 166, 206, 0.341) 0px 2px 16px 0px;       
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+.card h3{
+    color: rgb(103, 103, 103);
+    margin-top: -2px;
+}
+.card span{
+    margin-top: -2px;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: rgb(103, 103, 103);
+    cursor: pointer;
+    
+}
+
+.card svg{
+    
+    cursor: pointer;
+   color: #0070f3;
+    margin-bottom: -6px;
+    
+}
+.card h2{
+    display: flex;
+    text-align: justify;
+    font-size: 14px;
+    max-height: 205px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    
+    color: #0070f3;
+    justify-content: center;
+    
+}

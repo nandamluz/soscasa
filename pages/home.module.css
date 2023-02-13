@@ -1,0 +1,16 @@
+.container3{
+    justify-content: center;
+    display: grid;
+     grid-template-columns: 300px 300px 300px;
+    
+
+
+}
+
+@media (max-width: 700px){
+    .container3{
+        grid-template-columns: 250px
+    
+
+    }
+}

@@ -1,0 +1,23 @@
+
+.container2{
+    display: flex;
+    justify-content: center;
+
+}
+.container2 h1{
+    margin-left: 10px;
+}
+.wraper{
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    justify-content: center;
+    
+}
+.back{
+    cursor: pointer;
+    background-color: none;
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-left: -60px;
+    
+  }
