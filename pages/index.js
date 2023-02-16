@@ -7,6 +7,7 @@ import { useState,useEffect } from 'react';
  */import styles from "./home.module.css";
 import Container from "../components/Container";
 import Card from "../components/Card";
+
 import api from "../pages/api/reviews/find"
 import axios from "axios";
 import { PrismaClient } from "@prisma/client";
