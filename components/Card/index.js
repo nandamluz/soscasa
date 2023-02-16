@@ -1,7 +1,6 @@
 import styles from "./card.module.css"
 import * as React from 'react';
 
-import api from "../../pages/api/api"
 import { CardActions, Collapse } from "@mui/material";
 import { ExpandMore } from "@mui/icons-material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';

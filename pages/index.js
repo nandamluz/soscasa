@@ -3,27 +3,29 @@ import Header from "../components/Header";
 import Menu from "../components/Menu";
 import { useRouter } from "next/router";
 import { useState,useEffect } from 'react';
-import api from "../pages/api/api"
-
-import styles from "./home.module.css";
+/* import api from "../pages/api/reviews/find"
+ */import styles from "./home.module.css";
 import Container from "../components/Container";
 import Card from "../components/Card";
+import api from "../pages/api/reviews/find"
+import axios from "axios";
+import { PrismaClient } from "@prisma/client";
 
-export default function Home() {
-  const [workers, setWorkers] = useState([]);
-  
- 
-  
-  useEffect(() => {
-    loadWorkers();
-  }, []);
-  
-  async function loadWorkers() {
-    const listworkers = await api.get("/workers"); 
-    
-    setWorkers(listworkers.data);
-  } 
+const prisma = new PrismaClient();
 
+
+export const getStaticProps = async () => {
+  const reviews = await prisma.review.findMany()
+  console.log("reviews",reviews)
+  return {
+    props: {
+      reviews
+    },
+    revalidate: 30,
+  };
+};
+export default function Home(workers) {
+  
   
   return (
     <div className={styles.container}>
@@ -53,5 +55,7 @@ export default function Home() {
      
       
     </div>
+    
   );
+ 
 }

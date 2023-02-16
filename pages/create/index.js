@@ -1,12 +1,13 @@
 import styles from "./create.module.css"
 import Link from 'next/link';
 import { useState } from 'react';
-import api from "../../pages/api/api"
 import InputMask from "../../components/InputPhone";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import React from 'react';
+import { useRouter } from "next/router";
 
+import axios from "axios";
 
 /* import Maxwidthcopy from"../../components/Maxwidthcopy/maxwidth";
  */
@@ -19,18 +20,20 @@ const Create = () => {
   const [name, setName] = useState("");
   const [contact, setContact] = useState("");
   const [abstract, setAbstract] = useState("");
-  
   const [category, setCategory] = useState("");
+  const route = useRouter();
 
 
   
   async function addWorker() {
-    const { data } = await api.post('/workers', {name, contact, category, abstract});
+    const { data } = await axios.post('/api/review/create-review/index');
      console.log("teste", addWorker)
      toast('Avaliação Cadastrada! ✅ ', {
       position: "top-right",
       autoClose: 9000,
-    })
+    });
+    route.push("/");
+
   }
   
  

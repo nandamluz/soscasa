@@ -29,7 +29,7 @@ export default function Hydraulics({ workers }) {
 
 
 
-export const getStaticProps = async () => {
+/* export const getStaticProps = async () => {
   const {data} = await api.get("/workers?category=Hidraulica");
   return {
     props: {
@@ -37,4 +37,4 @@ export const getStaticProps = async () => {
     },
     revalidate: 30,
   };
-};
+}; */

@@ -1,7 +1,6 @@
 import styles from "./eletric.module.css"
 import Link from 'next/link';
 
-import api from "../api/api"
 import Card from "../../components/Card"
 import { useState,useEffect } from 'react';
 
@@ -29,7 +28,7 @@ export default function Eletric({ workers }) {
 }
 
 
-
+/* 
 export const getStaticProps = async () => {
   const {data} = await api.get("/workers?category=Eletrica");
   return {
@@ -38,4 +37,4 @@ export const getStaticProps = async () => {
     },
     revalidate: 30,
   };
-};
+}; */

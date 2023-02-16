@@ -1,10 +1,11 @@
 
 import styles from './header.module.css';
 import { useRouter } from 'next/router'
-import api from "../../pages/api/api"
 import Link from 'next/link';
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Router from "next/router";
+
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -17,7 +18,7 @@ export default function Header() {
   
 
 
-  useEffect(() => {
+ /*  useEffect(() => {
     if (citySelected) {
       getCity();
     }
@@ -38,7 +39,7 @@ export default function Header() {
       setCitySelected(city);
     }); console.log(setCitySelected,"setCitySelected")
     
-  }
+  } 
 
   const handleCitySelected = (place) => {
     let city = "";
@@ -49,7 +50,7 @@ export default function Header() {
     });
     setCitySelected(city);
     dispatch(userUpdate({ currentCity: city }));
-  };
+  };*/
     return (
       <div className={styles.container}>
         
@@ -61,7 +62,7 @@ export default function Header() {
               color: "#0070f3",
               
             }} />
-            <ReactGoogleAutocomplete
+            {/* <ReactGoogleAutocomplete
             apiKey="AIzaSyCDPJeULRM50iaaYmmkL2gMJCcwRMyPX64"
             onPlaceSelected={handleCitySelected}
             language="pt-BR"
@@ -79,11 +80,11 @@ export default function Header() {
               componentRestrictions: { country: "br" },
             }}
             value={citySelected}
-          />
+          /> */}
             
-            <Link href="/create"className={styles.card}>
-              <button >Avalie aqui</button>
-            </Link>
+            
+              <button onClick={() => Router.push("/create")}>Avalie aqui</button>
+            
             
           </div>
         

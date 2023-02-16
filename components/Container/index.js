@@ -1,6 +1,5 @@
 import styles from "./container.module.css"
 
-import api from "../../pages/api/api"
 import Card from "../../components/Card"
 import { useState,useEffect } from 'react';
 

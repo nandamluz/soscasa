@@ -1,7 +1,6 @@
 import styles from "./cleaning.module.css"
 import Link from 'next/link';
 
-import api from "../api/api"
 import Card from "../../components/Card"
 import { useState,useEffect } from 'react';
 
@@ -29,7 +28,7 @@ export default function Cleaning({ workers }) {
 
 
 
-export const getStaticProps = async () => {
+/* export const getStaticProps = async () => {
   const {data} = await api.get("/workers?category=Limpeza");
   return {
     props: {
@@ -37,4 +36,4 @@ export const getStaticProps = async () => {
     },
     revalidate: 30,
   };
-};
+}; */

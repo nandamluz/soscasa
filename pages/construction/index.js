@@ -1,6 +1,5 @@
 import styles from "./construction.module.css"
 
-import api from "../api/api"
 import Card from "../../components/Card"
 import { useState,useEffect } from 'react';
 import Link from 'next/link';
@@ -25,7 +24,7 @@ export default function Construction({ workers }) {
 }
 
 
-
+/* 
 export const getStaticProps = async () => {
   const {data} = await api.get("/workers?category=Construcao");
   return {
@@ -35,3 +34,4 @@ export const getStaticProps = async () => {
     revalidate: 30,
   };
 };
+ */
