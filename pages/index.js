@@ -45,14 +45,14 @@ export default function Home(workers) {
         </div>
         
       </main>
-      <div className={styles.container3}>
+      {/* <div className={styles.container3}>
           {workers.map((worker) => (
             
             <Card key={worker.id} {...worker} />
           ))}
         
       </div>
-
+ */}
      
       
     </div>

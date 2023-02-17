@@ -28,7 +28,6 @@ export default function Header() {
   async function getCity() {
     navigator.geolocation.getCurrentPosition(async function (posicao) {
       const { data } = await axios.get(
-        `https://maps.googleapis.com/maps/api/geocode/json?latlng=${posicao.coords.latitude},${posicao.coords.longitude}&result_type=locality&key=AIzaSyCDPJeULRM50iaaYmmkL2gMJCcwRMyPX64`
       );
       let city = "";
       data?.results[0].address_components.forEach((element) => {
