@@ -3,7 +3,7 @@ import styles from './header.module.css';
 import { useRouter } from 'next/router'
 import Link from 'next/link';
 import { useEffect, useState } from "react";
-import axios from "axios";
+
 import Router from "next/router";
 
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
