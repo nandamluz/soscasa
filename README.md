@@ -20,7 +20,7 @@ Passo-a-passo para executar e para ter um ambiente de desenvolvimento em execuç
 
 ## 🛠️ Construção
 
-Mencione as ferramentas que você usou para criar seu projeto
+Ferramentas que usei para criar o projeto
 
 * Next Js
 * Json Server
